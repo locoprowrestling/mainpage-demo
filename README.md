@@ -70,7 +70,21 @@ Production handoff checklist
 - Replace staging URL assumptions with the final custom domain and add `CNAME`
   only when the target repo/domain is confirmed.
 - Confirm the active ticket URL, current event, and venue copy before launch.
+- Keep visible copy aimed at LoCo Pro fans and people in Longmont/Colorado;
+  creator-facing phrases such as "interface", "proof of value", "conversion",
+  or "motion system" belong in internal docs only.
+- If a numbered card looks like an action, make the whole card an anchor. Do not
+  pair non-clickable action cards with separate text links underneath.
 - Add real YouTube/social links when the target channels are finalized.
 - Add analytics only after the privacy policy reflects the provider.
 - Re-run desktop and mobile browser checks before promoting this over the
   existing homepage.
+
+Durable project notes
+---------------------
+
+The workspace knowledgebase has the detailed runbook and friction log:
+
+```text
+/Users/gecko/locoprowrestling/.knowledgebase/projects/mainpage-demo/README.md
+```

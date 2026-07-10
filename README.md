@@ -1,43 +1,42 @@
-LoCo Pro Wrestling mainpage demo
---------------------------------
+LoCo Pro Wrestling homepage staging
+-----------------------------------
 
-This is a proof-of-concept fork of the production `mainpage` static site.
+This repo stages a production-oriented static homepage for LoCo Pro Wrestling.
+It keeps the operational shape of the existing `mainpage` site while presenting
+the brand as a live entertainment property: ticket path, event router, roster
+spotlight, watch path, partner confidence, and story context.
 
-The goal is to test a more cinematic LoCo Pro Wrestling homepage while staying
-compatible with GitHub Pages. GitHub Pages cannot run a Node/Express backend,
-but it can serve static HTML, CSS, JavaScript modules, images, and committed
-vendor libraries. This repo therefore has no production server requirement.
-
-Concept direction
+Production intent
 -----------------
 
-Vibe: **Championship Control Room**
-
-- Reference: a local wrestling poster wall beside a production switcher.
-- First emotion: energized.
-- Collision: show-night fight graphics plus practical event-directory utility.
-- Avoid: generic purple startup gradients, crypto-style hero art, and pages that
-  hide the wrestlers behind abstract decoration.
+- Make the first screen answer what LoCo Pro is, where it happens, and what to
+  do next.
+- Keep ticket purchase one tap away without hiding videos, roster art, or event
+  archives.
+- Use motion as a reusable brand system for web pages, shorts, match cards, and
+  event pages.
+- Keep the site deployable as static HTML, CSS, JavaScript, images, and committed
+  vendor libraries.
 
 Active libraries
 ----------------
 
-All library files are committed under `vendor/` so the demo is CDN-free:
+All runtime libraries are committed under `vendor/` so the page does not depend
+on third-party CDNs:
 
 - GSAP: hero entrance timeline and scroll reveals.
 - Three.js: hero energy/light canvas.
 - Motion DOM: interaction motion on cards.
 - Lenis: smooth anchor scrolling.
 - Lottie: vector seal accent behind the LoCo Pro mark.
-- Barba: static page-transition foundation for future multipage routing.
+- Barba: transition foundation for future multipage static routing.
 
-Theatre.js is intentionally not loaded in this public static page. It is useful
-as an authoring/staging tool, but the runtime package in this workspace is
-CommonJS-shaped and better suited to a bundled workflow than direct GitHub Pages
-delivery.
+Theatre.js remains an authoring/staging candidate rather than a direct runtime
+dependency here. The package available in this workspace is better suited to a
+bundled authoring workflow than direct unbundled static delivery.
 
-Run locally
------------
+Local verification
+------------------
 
 ```sh
 python3 -m http.server 4177
@@ -49,23 +48,26 @@ Then open:
 http://localhost:4177/
 ```
 
-Build for GitHub Pages
-----------------------
+Build the Pages artifact:
 
 ```sh
 ./scripts/build-pages.sh . _site
 ```
 
-The workflow in `.github/workflows/deploy-pages.yml` runs the same command on
-push to `main`.
+Useful checks:
 
-Deployment note
----------------
-
-The production `mainpage` repo uses `CNAME` for `mainpage.locopro.pw`. This demo
-repo intentionally does not include a `CNAME`, so it can publish as a GitHub
-Pages project site such as:
-
-```text
-https://locoprowrestling.github.io/mainpage-demo/
+```sh
+node --check app.js
+git diff --check -- .
 ```
+
+Production handoff checklist
+----------------------------
+
+- Replace staging URL assumptions with the final custom domain and add `CNAME`
+  only when the target repo/domain is confirmed.
+- Confirm the active ticket URL, current event, and venue copy before launch.
+- Add real YouTube/social links when the target channels are finalized.
+- Add analytics only after the privacy policy reflects the provider.
+- Re-run desktop and mobile browser checks before promoting this over the
+  existing homepage.

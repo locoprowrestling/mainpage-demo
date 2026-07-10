@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LoCo Pro Wrestling | Mainpage Demo</title>
+  <meta
+    name="description"
+    content="A motion-forward LoCo Pro Wrestling web concept for GitHub Pages: event hub, roster stories, video moments, and interactive brand energy."
+  >
+  <meta name="theme-color" content="#07110c">
+  <meta property="og:title" content="LoCo Pro Wrestling">
+  <meta
+    property="og:description"
+    content="One brand hub for LoCo Pro Wrestling: fights, factions, videos, events, and the story so far."
+  >
+  <link rel="icon" type="image/png" href="webimages/locopro-logo.png">
+  <link rel="apple-touch-icon" href="webimages/locopro-logo.png">
+  <link rel="stylesheet" href="styles.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "motion-dom": "./vendor/motion-dom/index.mjs",
+        "motion-utils": "./vendor/motion-utils/index.mjs"
+      }
+    }
+  </script>
+</head>
+<body data-barba="wrapper">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="page-wipe" aria-hidden="true"></div>
+
+  <header class="site-header" data-shell>
+    <a class="brand" href="#top" aria-label="LoCo Pro Wrestling home">
+      <span class="brand__mark"><img src="webimages/locopro-logo.png" alt=""></span>
+      <span class="brand__text">LoCo Pro Wrestling</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#watch">Watch</a>
+      <a href="#events">Events</a>
+      <a href="#roster">Roster</a>
+      <a href="#timeline">Timeline</a>
+      <a class="nav__cta" href="https://tickets.locopro.pw">Tickets</a>
+    </nav>
+  </header>
+
+  <main id="main" data-barba="container" data-barba-namespace="home">
+    <section id="top" class="hero section-band">
+      <canvas id="hero-canvas" class="hero__canvas" aria-hidden="true"></canvas>
+      <div class="hero__belt" aria-hidden="true">
+        <img src="webimages/poc/city-of-lights-belt.png" alt="">
+      </div>
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__content shell">
+        <div class="hero__copy">
+          <p class="eyebrow">Independent wrestling from Longmont, Colorado</p>
+          <h1>LoCo Pro Wrestling</h1>
+          <p class="hero__lede">
+            Follow the fight, pick your side, and catch the next chapter. This is a
+            serialized wrestling universe with event sites, match highlights, faction
+            rivalries, games, and ticket links gathered into one kinetic brand hub.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#watch">Watch the latest</a>
+            <a class="button button--ghost" href="#events">Choose an event</a>
+          </div>
+          <dl class="hero__ledger" aria-label="LoCo Pro quick facts">
+            <div><dt>Current chapter</dt><dd>The Last Stand at the Lodge</dd></div>
+            <div><dt>Primary venue</dt><dd>Elks Lodge 1055, Coffman Street</dd></div>
+            <div><dt>Public hub</dt><dd>Static GitHub Pages, no server runtime</dd></div>
+          </dl>
+        </div>
+        <div class="hero__poster" aria-label="LoCo Pro roster feature">
+          <div id="lottie-seal" class="lottie-seal" aria-hidden="true"></div>
+          <img class="hero__mark" src="webimages/poc/locopro-primary-mark.png" alt="LoCo Pro">
+          <div class="roster-stack" aria-hidden="true">
+            <img class="roster-stack__person roster-stack__person--erza" src="webimages/poc/erza.png" alt="">
+            <img class="roster-stack__person roster-stack__person--cody" src="webimages/poc/cody-devine.png" alt="">
+            <img class="roster-stack__person roster-stack__person--anuka" src="webimages/poc/anuka-gutierrez.png" alt="">
+          </div>
+          <div class="poster-card">
+            <span>Tonight's proof</span>
+            <strong>Real assets, web-native motion, deployable as static files.</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="watch" class="showcase section-band">
+      <div class="shell">
+        <div class="section-heading">
+          <p class="eyebrow">Watch paths</p>
+          <h2>Make the homepage feel like the opening seconds of a show.</h2>
+          <p>
+            The demo uses real LoCo Pro art with motion layers that can be reused for
+            YouTube bumpers, event pages, match-card teasers, and game promos.
+          </p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card" data-motion-card>
+            <span class="feature-card__num">01</span>
+            <h3>Latest fight package</h3>
+            <p>Hero copy and CTAs route visitors toward video first instead of making them decode the lore cold.</p>
+          </article>
+          <article class="feature-card" data-motion-card>
+            <span class="feature-card__num">02</span>
+            <h3>Event router</h3>
+            <p>Each chapter gets a strong card with one job: move fans to event details or tickets.</p>
+          </article>
+          <article class="feature-card" data-motion-card>
+            <span class="feature-card__num">03</span>
+            <h3>Character gravity</h3>
+            <p>Faces, faction colors, and belt imagery do the selling. Motion supports the art, not the other way around.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="events" class="events section-band">
+      <div class="shell">
+        <div class="section-heading section-heading--split">
+          <div>
+            <p class="eyebrow">Event sites</p>
+            <h2>Every chapter has its own door.</h2>
+          </div>
+          <p>Keep the main page as the router while event microsites carry the details, tickets, legal copy, and social preview art.</p>
+        </div>
+        <div class="event-wall">
+          <a class="event-card event-card--feature" href="https://laststand.locopro.pw">
+            <img src="webimages/event-laststand.jpg" alt="The Last Stand at the Lodge event art">
+            <span>Featured</span>
+            <strong>The Last Stand at the Lodge</strong>
+          </a>
+          <a class="event-card" href="https://battle.locopro.pw">
+            <img src="webimages/event-battle.jpg" alt="Battle at the Opera House event art">
+            <span>Archive</span>
+            <strong>Battle at the Opera House</strong>
+          </a>
+          <a class="event-card" href="https://vendetta.locopro.pw">
+            <img src="webimages/event-vendetta.jpg" alt="Vendetta event art">
+            <span>Archive</span>
+            <strong>Vendetta</strong>
+          </a>
+          <a class="event-card" href="https://mainstreet.locopro.pw">
+            <img src="webimages/event-mainstreet.jpg" alt="Battle for Main Street event art">
+            <span>Origin</span>
+            <strong>Battle for Main Street</strong>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="roster" class="roster section-band">
+      <div class="shell roster__inner">
+        <div class="section-heading">
+          <p class="eyebrow">Roster gravity</p>
+          <h2>Use faces as the interface.</h2>
+          <p>
+            A fan should not need a paragraph before they feel the conflict. Lead with
+            characters, then let cards and timelines explain the stakes.
+          </p>
+        </div>
+        <div class="portrait-rail" aria-label="Featured LoCo Pro characters">
+          <article>
+            <img src="webimages/poc/nicky-hyde.png" alt="Nicky Hyde">
+            <span>Nicky Hyde</span>
+          </article>
+          <article>
+            <img src="webimages/poc/zeak-gallent.png" alt="Zeak Gallent">
+            <span>Zeak Gallent</span>
+          </article>
+          <article>
+            <img src="webimages/poc/anuka-gutierrez.png" alt="Anuka Gutierrez">
+            <span>Anuka Gutierrez</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline" class="timeline section-band">
+      <div class="shell">
+        <div class="section-heading section-heading--center">
+          <p class="eyebrow">Story spine</p>
+          <h2>Longmont history, faction pressure, and show-night consequences.</h2>
+        </div>
+        <div class="timeline__track">
+          <article><span>1871</span><strong>The town myths begin.</strong><p>Founding families, old alliances, and the seeds of faction power.</p></article>
+          <article><span>2017</span><strong>Battle for Main Street.</strong><p>The original public chapter anchors the modern LoCo Pro story.</p></article>
+          <article><span>2026</span><strong>City of Lights escalates.</strong><p>Gauntlets, contracts, substitutions, and title consequences collide.</p></article>
+          <article><span>Now</span><strong>The Lodge becomes the pressure cooker.</strong><p>The event router sends fans to the next live chapter.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta section-band">
+      <div class="shell final-cta__box">
+        <img src="webimages/locopro-logo.png" alt="" aria-hidden="true">
+        <div>
+          <p class="eyebrow">Mainpage demo</p>
+          <h2>Static site. Show-level motion. Ready for GitHub Pages.</h2>
+        </div>
+        <a class="button button--primary" href="https://tickets.locopro.pw">Check tickets</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <span>LoCo Pro Wrestling</span>
+      <nav aria-label="Footer">
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="tiktok-auth.html">TikTok Auth</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="vendor/gsap/gsap.min.js"></script>
+  <script src="vendor/lenis/lenis.min.js"></script>
+  <script src="vendor/barba/barba.umd.js"></script>
+  <script src="vendor/lottie/lottie_light.min.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

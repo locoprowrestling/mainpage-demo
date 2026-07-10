@@ -1,10 +1,10 @@
 LoCo Pro Wrestling homepage staging
 -----------------------------------
 
-This repo stages a production-oriented static homepage for LoCo Pro Wrestling.
+This repo stages a fan-facing static homepage for LoCo Pro Wrestling.
 It keeps the operational shape of the existing `mainpage` site while presenting
 the brand as a live entertainment property: ticket path, event router, roster
-spotlight, watch path, partner confidence, and story context.
+spotlight, watch path, Longmont/Colorado community pride, and story context.
 
 Production intent
 -----------------
@@ -13,6 +13,9 @@ Production intent
   do next.
 - Keep ticket purchase one tap away without hiding videos, roster art, or event
   archives.
+- Keep public copy aimed at LoCo Pro fans and the people of Longmont/Colorado;
+  implementation, motion-system, and creator-facing strategy language belongs in
+  internal docs only.
 - Use motion as a reusable brand system for web pages, shorts, match cards, and
   event pages.
 - Keep the site deployable as static HTML, CSS, JavaScript, images, and committed
